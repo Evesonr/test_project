@@ -46,34 +46,3 @@ model = train_model(X, y)
 test_result = test_model(model, X, y)
 
 print(test_result)
-
-# Notes
-# A particular topic? This is linear regression, what are you trying to do exactly?
-#   Use logistic regression instead, and consider changing your y to one-hot encoded labels for each topic
-#   Consider using Logistic regression instead, or NB, or RF
-
-# evaluating on train set!
-
-# Not using PCA or standard scalar
-# Do we need to reduce dimensions? What are dimensions of the dataset?
-# Do we need to apply standardisation? Already applying normalisation
-# Is pipeline in correct order?
-
-# use cross-entropy loss and use OOTB method to calculate. You're using MSE which is lin reg
-
-# Numpy imports are inefficient
-# from sklearn.datasets import dtaaset...
-# returning loss? SHould calculate a 
-# Is calculation of loss correct? Could it be more efficient?
-# Fit method could all be looked at.
-#   Why calculating n_features and not using?
-#   Check matrix multiplication is correct
-
-
-# TFIDF
-# Already normalised so no norm needed
-    # For the analyzer, "word" is likely a better choice than "char" for text classification. Analyzing whole words instead of character n-grams will lead to features that capture meaning better.
-        # Some other analyzer options to consider:
-        # "word" - Split text into words using whitespace and punctuation
-        # "char_wb" - Character n-grams but keep words intact
-        # "ngram" - Tokenize into n-grams of words instead of individual words
